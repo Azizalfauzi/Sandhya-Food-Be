@@ -1,0 +1,103 @@
+//Create user
+
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"Fahri Zul",
+    "email":"fahri@gmail.com",
+    "password":"1234",
+    "confPassword":"1234",
+    "role":"user"
+}
+###
+//Update user
+PATCH  http://localhost:5000/users/8875ead6-0a2a-40ae-ae96-22562bf5728c
+Content-Type: application/json
+
+{
+    "name":"M Zia Updated",
+    "email":"zia@gmail.com",
+    "password":"",
+    "confPassword":"",
+    "role":"user"
+}
+###
+//Get all user
+GET http://localhost:5000/users
+###
+//Get Single user
+GET http://localhost:5000/users/8875ead6-0a2a-40ae-ae96-22562bf5728c
+###
+//Delete user
+DELETE  http://localhost:5000/users/8875ead6-0a2a-40ae-ae96-22562bf5728c
+
+###
+//Login admin
+
+#     "uuid": "4f6a7e82-414f-492e-a3ab-885cc3de358e",
+#     "name": "Aziz Alfauzi",
+#     "email": "adminaziz@gmail.com",
+#     "role": "admin"
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"adminaziz@gmail.com",
+    "password":"1234"
+}
+###
+//Login user
+
+#   "uuid": "d69e850d-6325-46c6-a57b-7f442d18aa1d",
+#   "name": "Fahri Zul",
+#   "email": "fahri@gmail.com",
+#   "role": "user"
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"fahri@gmail.com",
+    "password":"1234"
+}
+
+
+###
+//Get all single user
+GET http://localhost:5000/getme
+
+###
+//Logout user
+DELETE  http://localhost:5000/logout
+
+###
+//Get all products automatic view
+GET http://localhost:5000/products
+
+//Create product automatic input
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name":"Product 5",
+    "price": 60000
+    
+}
+//update product automatic input
+###
+PATCH  http://localhost:5000/products/36effbb0-e064-478b-9c82-5e142a2909f9
+Content-Type: application/json
+
+{
+    "name":"Product 1",
+    "price": 35000
+    
+}
+###
+//Get Single Products automatic view
+GET http://localhost:5000/products/e6a14102-34b6-4bf2-976f-f83269996f09
+###
+//Delete product automatic delete
+DELETE  http://localhost:5000/products/89211d9a-ad52-4382-9876-589bd990a47b
